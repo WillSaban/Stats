@@ -1,8 +1,0 @@
-## linear mixed model for three-way interaction + 3 covariates 
-
-l2 <- lmer(log(RT) ~ 1+Group*Complexity*Min_digit +scale(Age)+scale(YoE)+scale(MOCA) 
-+  (1 | Participant_Public_ID), data=new_EXP_DATA )
-print(summary(l2))
-
-## Anova for the same design
-anova(l2, type = 'III', test = 'F')
